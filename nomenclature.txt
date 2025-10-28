@@ -1,0 +1,5 @@
+Class -- PascalCase
+Variable -- snake_case
+Methods -- snake_case
+Helper Methods -- _my_helper_methods
+Constant -- UPPER_CASE

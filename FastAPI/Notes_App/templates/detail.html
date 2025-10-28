@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ note.title }}</h2>
+<p>{{ note.content }}</p>
+<a href="/notes/{{ note.id }}/edit/">Edit</a>
+{% endblock %}

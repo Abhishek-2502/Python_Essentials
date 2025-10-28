@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>All Notes</h2>
+<ul>
+    {% for note in notes %}
+    <li>
+        <a href="/notes/{{ note.id }}/">{{ note.title }}</a>
+        <form action="/notes/{{ note.id }}/delete/" method="post" style="display:inline;">
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
