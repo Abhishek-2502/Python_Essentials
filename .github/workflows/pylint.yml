@@ -27,4 +27,24 @@ jobs:
 
       - name: Analyse code in Pylint directory with pylint
         run: |
-          pylint $(git ls-files 'Pylint/*.py')
+          SCORE=$(pylint --exit-zero --score=y $(git ls-files 'Pylint/*.py') | tee pylint-report.txt | grep 'Your code has been rated at' | awk '{print $7}' | cut -d'/' -f1)
+          echo "Pylint score: $SCORE"
+          
+          # Compare score to threshold
+          if (( $(echo "$SCORE < 9.00" | bc -l) )); then
+            echo "❌ Pylint score below 9.0 — failing build"
+            echo "### ⚠️ Pylint Check Failed" >> $GITHUB_STEP_SUMMARY
+            echo "**Pylint score:** $SCORE/10.0 ❌" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          else
+            echo "✅ Pylint score is 9.0 or above"
+            echo "### ✅ Pylint Check Passed" >> $GITHUB_STEP_SUMMARY
+            echo "**Pylint score:** $SCORE/10.0 🟢" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Upload Pylint Report (Artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pylint-report-${{ matrix.python-version }}
+          path: pylint-report.txt
