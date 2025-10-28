@@ -45,16 +45,16 @@ class MyPerson:
 
 print(MyPerson("Abhi",20,"m").get_name())
 
-# Wrong Code But disable
-#pylint: disable=missing-module-docstring
-class myperson: # pylint: disable=invalid-name disable=missing-class-docstring disable=too-few-public-methods
-    def __init__(self, name, age, gender): # pylint: disable=unused-argument
-        self.name=name
-        self.age=age
+# # Wrong Code But disable
+# #pylint: disable=missing-module-docstring
+# class myperson: # pylint: disable=invalid-name disable=missing-class-docstring disable=too-few-public-methods
+#     def __init__(self, name, age, gender): # pylint: disable=unused-argument
+#         self.name=name
+#         self.age=age
 
-    def GetName(self): # pylint: disable=missing-function-docstring
-        self.AskedForName = True # pylint: disable=attribute-defined-outside-init
-        return self.name
+#     def GetName(self): # pylint: disable=missing-function-docstring
+#         self.AskedForName = True # pylint: disable=attribute-defined-outside-init
+#         return self.name
 
 
-print(myperson("Abhi",20,"m").GetName()) # pylint: disable=missing-final-newline
+# print(myperson("Abhi",20,"m").GetName()) # pylint: disable=missing-final-newline
