@@ -18,7 +18,7 @@ Welcome to the Django Web Hosting guide! This repository provides instructions f
 
 3. **Clone the Repository**: Change repository link according to your repository
     ```bash
-    git clone https://github.com/Abhishek-2502/django_webhosting
+    git clone https://github.com/Abhishek-2502/python_essentials
     ```
 4. **Create a Virtual Environment**:
     ```bash
@@ -26,8 +26,7 @@ Welcome to the Django Web Hosting guide! This repository provides instructions f
     ```
 5. **Changing path**: Get inside the Folder where manage.py is present (Use ls to look content of folder)
    ```bash
-    cd django_webhosting
-    cd django_webhosting
+    cd python_essentials/Hosting/pythonAnywhere/django_webhosting/django_webhosting
     ```
 6. **Install Django**:
     ```bash
