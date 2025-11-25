@@ -85,7 +85,8 @@ Create a repository on GitHub and push your project to the repository.
 2. Click on "Add New" then "Project".
 3. Select your GitHub repository.
 4. Name your deployment and configure your project settings if needed (such as the root directory).
-5. Click "Deploy".
+5. Select framework as `Django`.
+6. Click "Deploy".
 
 ## Conclusion
 After following these steps, your Django project should be successfully deployed on Vercel. Visit your Vercel dashboard to manage and view your project.
