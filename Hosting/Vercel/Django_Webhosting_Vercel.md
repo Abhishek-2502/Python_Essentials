@@ -19,8 +19,8 @@ Create a file named `build_files.sh` in the same directory as your `manage.py` f
 
 ```sh
 # build_files.sh
-pip install -r requirements.txt
-python3.9 manage.py collectstatic --noinput
+python3.12 -m pip install -r requirements.txt
+python3.12 manage.py collectstatic --noinput
 ```
 
 ### 3. Create `vercel.json`
