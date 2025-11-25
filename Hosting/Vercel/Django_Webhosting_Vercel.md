@@ -68,6 +68,8 @@ app = application
 Make the following changes in your `settings.py` file:
 
 ```python
+import os
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
